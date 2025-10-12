@@ -1,0 +1,8 @@
+/* .bg-gradient-radial {
+    background-image: radial-gradient(circle at top,
+            var(--tw-gradient-stops));
+} */
+
+.landingPage {
+    min-height: max(884px, 100dvh);
+}

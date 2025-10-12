@@ -1,0 +1,33 @@
+.textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    color: #374151;
+    padding: 0.5rem 0.5rem;
+    resize: none;
+    overflow: auto;
+    line-height: 1.2rem;
+    min-height: 1.5rem;
+    max-height: 10rem;
+    field-sizing: content;
+    /* 6 lines * 1.5rem = 9rem, but using 6rem for better UX */
+}
+
+.textarea::placeholder {
+    color: #9ca3af;
+}
+
+.textarea::input {
+    color: #ee00ff;
+}
+
+.textarea:disabled {
+    opacity: 0.5;
+}
+
+/* textarea:focus {
+    box-shadow: none !important;
+    outline: none !important;
+} */
