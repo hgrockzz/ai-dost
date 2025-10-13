@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState<"light" | "dark" | "system">();
+  const options = [
+    { label: "Light", icon: "☀️" },
+    { label: "Dark", icon: "🌙" },
+    { label: "System", icon: "💻" },
+  ];
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | "system" | null;
@@ -23,12 +28,8 @@ const ThemeToggle = () => {
   }, [theme]);
 
   return (
-    <div className="flex gap-4">
-      {[
-        { label: "Light", icon: "☀️" },
-        { label: "Dark", icon: "🌙" },
-        { label: "System", icon: "💻" },
-      ].map(({ label, icon }) => (
+    <div className="flex justify-between gap-4">
+      {options?.map(({ label, icon }) => (
         <button
           key={label}
           className={`flex flex-col items-center justify-center w-24 p-3 rounded-2xl border text-sm transition
